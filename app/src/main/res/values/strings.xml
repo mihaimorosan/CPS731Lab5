@@ -3,4 +3,6 @@
     <string name="title_car_list">Cars</string>
     <string name="title_car_detail">Car Detail</string>
     <string name="cars_for_car_enthusiasts">Cars For Car Enthusiasts</string>
+    <string name="todo">TODO</string>
+    <string name="car_specifications_here">Car specifications here</string>
 </resources>
