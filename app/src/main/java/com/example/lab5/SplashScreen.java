@@ -16,6 +16,7 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        setTitle("Cars For Car Enthusiasts");
         song = new MediaPlayer();
         song = MediaPlayer.create(this,R.raw.song);
         TimerTask task = new TimerTask() {

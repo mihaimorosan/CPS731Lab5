@@ -23,16 +23,23 @@ import android.view.MenuItem;
  */
 public class CarDetailActivity extends AppCompatActivity {
 
+    private String carTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_detail);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
+        setSupportActionBar(toolbar);
 
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
+        carTitle = getIntent().getStringExtra("car");
+        actionBar.setTitle(carTitle);
 
         // savedInstanceState is non-null when there is fragment state
         // saved from previous configurations of this activity

@@ -41,7 +41,6 @@ public class CarListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_list);
-
         if (findViewById(R.id.car_detail_container) != null) {
             // The detail container view will be present only in the
             // large-screen layouts (res/values-w900dp).
@@ -81,6 +80,7 @@ public class CarListActivity extends AppCompatActivity {
                     Context context = view.getContext();
                     Intent intent = new Intent(context, CarDetailActivity.class);
                     intent.putExtra(CarDetailFragment.ARG_ITEM_ID, item.id);
+                    intent.putExtra("car", item.title);
 
                     context.startActivity(intent);
                 }
