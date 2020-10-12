@@ -3,13 +3,12 @@ package com.example.lab5;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.google.android.material.appbar.CollapsingToolbarLayout;
-
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lab5.dummy.DummyContent;
@@ -60,7 +59,10 @@ public class CarDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.car_specs)).setText(mItem.details);
+            ((TextView) rootView.findViewById(R.id.car_specs)).setText(mItem.specifications);
+            ImageView carPic = (ImageView) rootView.findViewById(R.id.carImage);
+            int id = getResources().getIdentifier(mItem.image, "drawable", getActivity().getPackageName());
+            carPic.setImageResource(id);
         }
 
         return rootView;
